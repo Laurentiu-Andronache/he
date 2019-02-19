@@ -10,4 +10,4 @@ License: `MIT`
 
 Requires: `Python 3.6 or higher`
 
-[on GitHub]: https://github.com/Laurentiu-Andronache/pe
+[on GitHub]: https://github.com/Laurentiu-Andronache/he

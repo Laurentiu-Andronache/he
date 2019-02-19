@@ -195,8 +195,8 @@ setup(
     # maintainers, and where to support the project financially. The key is
     # what's used to render the link text on PyPI.
     project_urls={  # Optional
-        'Bug Reports': 'https://github.com/Laurentiu-Andronache/pe/issues',
+        'Bug Reports': 'https://github.com/Laurentiu-Andronache/he/issues',
         'Say Thanks!': 'https://saythanks.io/to/Laurentiu-Andronache',
-        'Source': 'https://github.com/Laurentiu-Andronache/pe',
+        'Source': 'https://github.com/Laurentiu-Andronache/he',
     },
 )
