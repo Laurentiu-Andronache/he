@@ -1,4 +1,6 @@
+from pathlib import Path
+
 
 def main():
     """Entry point for the application script"""
-    print("Call your main application code here")
+    print(f'Your working directory is {Path.cwd()}')
