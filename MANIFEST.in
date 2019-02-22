@@ -1,4 +1,0 @@
-include *.in
-include *.txt
-include tox.ini
-recursive-include tests *.py
