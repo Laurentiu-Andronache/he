@@ -1,15 +1,9 @@
-#!/usr/bin/env python3
-
-# import logging
 from os import chdir
 from pathlib import Path
 
 import pytest
 
 from he.contexts import working_directory
-
-
-# logging.basicConfig(level=logging.DEBUG)
 
 
 def test_working_directory_with_absolute_path(tmp_path):
@@ -20,7 +14,7 @@ def test_working_directory_with_absolute_path(tmp_path):
         def with_decorator():
             return Path.cwd()
 
-        if type(temp_dir) is int:
+        if isinstance(temp_dir, int):
             with pytest.raises(TypeError):
                 with_decorator()
         else:

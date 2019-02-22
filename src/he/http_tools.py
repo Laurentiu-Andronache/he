@@ -5,7 +5,7 @@ from random import choice
 
 import requests
 
-_logger = logging.getLogger(__name__)
+_LOGGER = logging.getLogger(__name__)
 
 # from https://techblog.willshouse.com/2012/01/03/most-common-user-agents/
 DESKTOP_AGENTS = """Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36
@@ -93,6 +93,6 @@ def get_json_parsed_from(url):
         headers = random_headers()
         headers['Accept'] = 'application/json,text/*;q=0.99'
         return requests.get(url, headers=random_headers()).json()
-    except Exception:
-        _logger.exception(f'Failed getting JSON from {url}')
+    except BaseException:
+        _LOGGER.exception('Failed getting JSON from %s', repr(url), exc_info=False)
         return ''

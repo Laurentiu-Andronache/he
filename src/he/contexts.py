@@ -5,7 +5,7 @@ import os
 from contextlib import contextmanager
 from pathlib import Path
 
-_logger = logging.getLogger(__name__)
+_LOGGER = logging.getLogger(__name__)
 
 
 @contextmanager
@@ -17,9 +17,9 @@ def working_directory(temporary_path, initial_path=Path.cwd()):
     Source: https://stackoverflow.com/questions/41742317/how-can-i-change-directory-with-python-pathlib
 
     """
-    _logger.debug(f'Working directory of the calling script: {Path.cwd()}')
-    _logger.debug(f'initial_path = {initial_path}')
-    _logger.debug(f'temporary_path = {temporary_path}')
+    _LOGGER.debug('Working directory of the calling script: %s', Path.cwd())
+    _LOGGER.debug('initial_path = %s', initial_path)
+    _LOGGER.debug('temporary_path = %s', temporary_path)
 
     if not isinstance(temporary_path, (Path, str)):
         raise TypeError('"temporary_path" is not of type `Path` or `str`')
@@ -31,7 +31,7 @@ def working_directory(temporary_path, initial_path=Path.cwd()):
 
     try:
         os.chdir(initial_path / temporary_path)
-        _logger.debug(f'Temporarily changed working directory to: {Path.cwd()}')
+        _LOGGER.debug('Temporarily changed working directory to: %s', Path.cwd())
         yield
     finally:
         os.chdir(initial_path)
