@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 # import logging
 from os import chdir
 from pathlib import Path
@@ -10,8 +12,8 @@ from he.contexts import working_directory
 # logging.basicConfig(level=logging.DEBUG)
 
 
-def test_working_directory_with_absolute_path(tmpdir):
-    for temp_dir in (Path(tmpdir), str(tmpdir), 1337):
+def test_working_directory_with_absolute_path(tmp_path):
+    for temp_dir in (tmp_path, str(tmp_path), 1337):
         initial_path = Path.cwd()
 
         @working_directory(temp_dir)

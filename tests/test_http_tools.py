@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from pytest import mark
 
 from he.http_tools import get_json_parsed_from
