@@ -7,6 +7,10 @@ dist/
 __pycache__/
 *.so
 *~
+.venv
+.coverage
+coverage.xml
+.idea
 
 # due to using tox and pytest
 .tox
