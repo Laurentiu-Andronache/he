@@ -23,7 +23,7 @@ def test_working_directory_with_absolute_path(tmp_path):
 
 
 def test_working_directory_with_relative_path():
-    initial_path = Path.cwd()
+    initial_path_dir = Path.cwd()
     temp_relative_dir = 'temp-test-dir'
     relative_dir_path = Path(temp_relative_dir).absolute()
     if not relative_dir_path.exists():
@@ -33,12 +33,22 @@ def test_working_directory_with_relative_path():
     chdir(Path.home())
 
     # ... but we'll test the function with a path relative to the initial working directory (initial_path)
-    @working_directory(temp_relative_dir, initial_path)
+    @working_directory(temp_relative_dir, initial_path_dir)
     def with_decorator():
         return Path.cwd()
 
     assert relative_dir_path == with_decorator()
-    assert Path.cwd() == initial_path
+    assert Path.cwd() == initial_path_dir
+
+    # also try with initial_path as file instead of directory
+    initial_path_file = Path.cwd() / 'fictive_calling_script.py'
+
+    @working_directory(temp_relative_dir, initial_path_file)
+    def again_with_decorator():
+        return Path.cwd()
+
+    assert relative_dir_path == again_with_decorator()
+    assert Path.cwd() == initial_path_dir
 
     # cleanup
     if relative_dir_path.exists():

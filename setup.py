@@ -12,7 +12,7 @@ setup(
     name='he',
     # Versions should comply with PEP 440:
     # https://www.python.org/dev/peps/pep-0440/
-    version='2019.2a2',  # Required
+    version='2019.2b1',  # Required
     description='A library of Python helpers.',
     long_description=long_description,
     # Denotes that our long_description is in Markdown; valid values are

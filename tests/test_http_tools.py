@@ -1,9 +1,9 @@
-from pytest import mark
+import pytest
 
 from he.http_tools import get_json_parsed_from
 
 
-@mark.slow
+@pytest.mark.slow
 def test_get_json_parsed_from():
     # If fail, getting moderated subreddits from Reddit is not possible anymore with this method.
     assert {'data', 'kind'} == set(
