@@ -12,7 +12,7 @@ setup(
     name='he',
     # Versions should comply with PEP 440:
     # https://www.python.org/dev/peps/pep-0440/
-    version='2019.2b1',  # Required
+    version='2019.2b2',  # Required
     description='A library of Python helpers.',
     long_description=long_description,
     # Denotes that our long_description is in Markdown; valid values are
@@ -55,7 +55,7 @@ setup(
     # Similar to `install_requires` above, these must be valid existing
     # projects.
     extras_require={  # Optional
-        'dev': ['pre-commit'],
+        'dev': ['pre-commit', 'wheel', 'twine'],
         'test': ['pytest', 'pytest-cov', 'pytest-sugar', 'pytest-icdiff', 'hypothesis'],
     },
     # To provide executable scripts, use entry points in preference to the
