@@ -25,7 +25,7 @@ setup(
     author='Laurențiu Andronache',
     author_email='laurentiu.andronache@trailung.ro',
     classifiers=[
-        'Development Status :: 2 - Pre-Alpha',
+        'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
         'Topic :: Software Development :: Libraries',
         'License :: OSI Approved :: MIT License',
