@@ -31,7 +31,7 @@ def debug(func):
         _logger = logging.getLogger(__name__ + '.' + func.__name__)
         _logger.debug(' called with args (%s)', signature)
         value = func(*args, **kwargs)
-        _logger.debug(f' returned %r', value)
+        _logger.debug(' returned %r', value)
         return value
 
     return wrapper
