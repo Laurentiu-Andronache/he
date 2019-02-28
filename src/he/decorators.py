@@ -37,7 +37,7 @@ def debug(func):
     return wrapper
 
 
-@debug
+@timer
 def enjoy_decorators():
     """Enjoy seeing what the decorators from this file in action."""
 
@@ -45,15 +45,13 @@ def enjoy_decorators():
 
     sleep = debug(sleep)
 
-    @timer
+    # TODO: add a cool decorator here
     def sleep_times(time, times):
-        val = time * times
-        sleep(val)
-        return val
+        for _ in range(times):
+            sleep(time)
+        return times  # TODO: have a more interesting return value
 
-    sleep_times(0.1, 2)
-
-    return 1337
+    return sleep_times(0.1, 2)
 
 
 if __name__ == '__main__':
