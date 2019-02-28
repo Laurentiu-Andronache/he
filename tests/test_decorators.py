@@ -16,7 +16,7 @@ def test_timer(caplog):
 
     logged_message = caplog.messages[0]
     time_str = logged_message.split()[1]
-    time_rounded = round(float(time_str), 2)
+    time_rounded = round(float(time_str), 1)
     assert 0.1 == time_rounded
 
 
