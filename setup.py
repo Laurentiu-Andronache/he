@@ -55,7 +55,7 @@ setup(
     # Similar to `install_requires` above, these must be valid existing
     # projects.
     extras_require={  # Optional
-        'dev': ['pre-commit', 'wheel', 'twine'],
+        'dev': ['pre-commit', 'wheel', 'twine', 'flake8', 'flake8-bugbear', 'pylint'],
         'test': ['pytest', 'pytest-cov', 'pytest-sugar', 'pytest-icdiff', 'hypothesis'],
     },
     # To provide executable scripts, use entry points in preference to the
