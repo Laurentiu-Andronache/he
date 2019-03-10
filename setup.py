@@ -30,7 +30,6 @@ setup(
         'Intended Audience :: Developers',
         'Topic :: Software Development :: Libraries',
         'License :: OSI Approved :: MIT License',
-        'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
         'Typing :: Typed',
     ],
@@ -47,7 +46,7 @@ setup(
     packages=find_packages(where="src"),
     package_dir={"": "src"},
     package_data={'he': ['data/*.txt']},
-    python_requires='>=3.6',
+    python_requires='>=3.7',
     install_requires=['requests'],
     # List additional groups of dependencies here (e.g. development
     # dependencies). Users will be able to install these using the "extras"
