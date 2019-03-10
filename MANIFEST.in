@@ -1,0 +1,14 @@
+include LICENSE.txt
+
+exclude tox.ini
+
+prune src
+prune tests
+prune .idea
+prune *mypy*
+
+global-exclude *.py[cod]
+global-exclude __pycache__
+global-exclude .*
+
+recursive-include src *.py *.txt

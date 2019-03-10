@@ -12,7 +12,7 @@ setup(
     name='he',
     # Versions should comply with PEP 440:
     # https://www.python.org/dev/peps/pep-0440/
-    version='2019.2b2',  # Required
+    version='2019.03',
     description='A library of Python helpers.',
     long_description=long_description,
     # Denotes that our long_description is in Markdown; valid values are
@@ -24,13 +24,15 @@ setup(
     url='https://github.com/Laurentiu-Andronache/pe',
     author='Laurențiu Andronache',
     author_email='laurentiu.andronache@trailung.ro',
+    # https://pypi.org/classifiers/
     classifiers=[
-        'Development Status :: 4 - Beta',
+        'Development Status :: 5 - Production/Stable',
         'Intended Audience :: Developers',
         'Topic :: Software Development :: Libraries',
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
+        'Typing :: Typed',
     ],
     keywords='helpers library common useful functions decorators contexts classes',
     # You can just specify package directories manually here if your project is
@@ -44,8 +46,9 @@ setup(
     #
     packages=find_packages(where="src"),
     package_dir={"": "src"},
+    package_data={'he': ['data/*.txt']},
     python_requires='>=3.6',
-    install_requires=['dpcontracts', 'requests'],
+    install_requires=['requests'],
     # List additional groups of dependencies here (e.g. development
     # dependencies). Users will be able to install these using the "extras"
     # syntax, for example:
@@ -54,9 +57,17 @@ setup(
     #
     # Similar to `install_requires` above, these must be valid existing
     # projects.
-    extras_require={  # Optional
-        'dev': ['pre-commit', 'wheel', 'twine', 'flake8', 'flake8-bugbear', 'pylint'],
-        'test': ['pytest', 'pytest-cov', 'pytest-sugar', 'pytest-icdiff', 'hypothesis'],
+    extras_require={
+        'dev': ['pre-commit', 'wheel', 'twine', 'tox', 'tox-venv'],
+        'tox-manual': [
+            'flake8',
+            'flake8-bugbear',
+            'pylint',
+            'pytest-xdist',
+            'mypy',
+            'check-manifest',
+        ],
+        'test': ['pytest', 'pytest-cov', 'pytest-sugar', 'pytest-icdiff'],
     },
     # To provide executable scripts, use entry points in preference to the
     # "scripts" keyword. Entry points provide cross-platform support and allow
@@ -66,7 +77,7 @@ setup(
     # For example, the following would provide a command called `he` which
     # executes the function `main` from this package when invoked:
     entry_points={'console_scripts': ['he=he:main']},  # Optional
-    project_urls={  # Optional
+    project_urls={
         'Bug Reports': 'https://github.com/Laurentiu-Andronache/he/issues',
         'Say Thanks!': 'https://saythanks.io/to/Laurentiu-Andronache',
         'Source': 'https://github.com/Laurentiu-Andronache/he',
