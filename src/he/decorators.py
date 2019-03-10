@@ -150,6 +150,8 @@ class CountCalls:
         self._logger = logging.getLogger(__name__ + '.' + self.func.__name__)
         self.last_return_value = None
 
+    __call__: F
+
     def __call__(self, *args: Any, **kwargs: Any) -> Any:
         self.num_calls += 1
         self._logger.debug(' called %s times', self.num_calls)
