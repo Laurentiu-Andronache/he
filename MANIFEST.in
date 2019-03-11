@@ -1,6 +1,6 @@
 include LICENSE.txt
 
-exclude tox.ini, requirements.txt
+exclude tox.ini requirements.txt
 
 prune src
 prune tests
