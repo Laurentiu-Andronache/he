@@ -57,7 +57,7 @@ setup(
     # Similar to `install_requires` above, these must be valid existing
     # projects.
     extras_require={
-        'dev': ['pre-commit', 'wheel', 'twine', 'tox', 'tox-venv'],
+        'dev': ['pre-commit', 'wheel', 'twine', 'tox', 'tox-venv', 'sphinx'],
         'tox-manual': [
             'flake8',
             'flake8-bugbear',
