@@ -6,6 +6,7 @@ prune src
 prune tests
 prune .idea
 prune *mypy*
+prune docs
 
 global-exclude *.py[cod]
 global-exclude __pycache__
