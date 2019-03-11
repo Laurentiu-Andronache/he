@@ -2,6 +2,7 @@
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/Laurentiu-Andronache/he.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Laurentiu-Andronache/he/alerts/)
 [![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/Laurentiu-Andronache/he.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Laurentiu-Andronache/he/context:python)
 [![Documentation Status](https://readthedocs.org/projects/he/badge/?version=latest)](https://he.readthedocs.io/?badge=latest)
+[![codecov](https://codecov.io/gh/Laurentiu-Andronache/he/branch/master/graph/badge.svg)](https://codecov.io/gh/Laurentiu-Andronache/he)
 
 
 # he - A library of Python helpers
