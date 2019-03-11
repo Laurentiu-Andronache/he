@@ -6,7 +6,7 @@ It exists to aid Python developers in not reinventing the wheel.
 
 To contribute, submit a pull request [in this repository].
 
-Library documentation: https://he.readthedocs.io/en/latest/
+Library documentation: https://he.readthedocs.io
 
 ---
 
