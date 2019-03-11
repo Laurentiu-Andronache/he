@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.com/Laurentiu-Andronache/he.svg?branch=master)](https://travis-ci.com/Laurentiu-Andronache/he)
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/Laurentiu-Andronache/he.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Laurentiu-Andronache/he/alerts/)
 
 # he - A library of Python helpers
 
