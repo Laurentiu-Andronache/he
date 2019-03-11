@@ -4,7 +4,9 @@
 
 It exists to aid Python developers in not reinventing the wheel.
 
-To contribute, submit a pull request [on Github].
+To contribute, submit a pull request [in this repository].
+
+Library documentation: https://he.readthedocs.io/en/latest/
 
 ---
 
@@ -28,4 +30,4 @@ License: `MIT`
 
 Requires: `Python 3.7 or higher`
 
-[on GitHub]: https://github.com/Laurentiu-Andronache/he
+[in this repository]: https://github.com/Laurentiu-Andronache/he
