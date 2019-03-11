@@ -11,10 +11,13 @@ _LOGGER = logging.getLogger(__name__)
 
 @contextmanager
 def working_directory(
-    temporary_path: Union[Path, str], initial_path: Union[Path, str] = Path.cwd()
+        temporary_path: Union[Path, str],
+        initial_path: Union[Path, str] = Path.cwd()
 ) -> Iterator[None]:
-    """Changes working directory, and returns to `initial_path` on exit. It's needed for PRAW for example,
-    because it looks for praw.ini in Path.cwd(), but that file could be kept in a different directory.
+    """Change working directory, and return to `initial_path` on exit.
+
+    It's needed for PRAW for example, because it looks for praw.ini in Path.cwd(),
+    but that file could be kept in a different directory.
 
     `initial_path` can be used for example to change working directory relative to the script path, or
     to end up in a different directory than Path.cwd() of the calling script.

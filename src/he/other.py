@@ -10,20 +10,19 @@ from typing import Union, Sequence, Text, Any
 
 
 def run(
-    shell_command: Union[
-        bytes, Text, Sequence[Union[bytes, Text, PathLike]]
-    ],  # type: ignore
-    **subprocess_run_kwargs: Any,
+        shell_command: Union[bytes, Text, Sequence[Union[bytes, Text, PathLike]]],  # type: ignore
+        **subprocess_run_kwargs: Any,
 ) -> int:
-    """Runs one or more commands in the local shell."""
+    """Run one or more commands in the local shell.
 
+    WARNING: Make sure that user input cannot get in any way as an argument to this function!
+    """
     try:
         return subprocess.run(
             shell_command, check=True, shell=True, **subprocess_run_kwargs
         ).returncode
     except subprocess.CalledProcessError as e:
         return e.returncode
-
 
 #
 # if __name__ == '__main__':

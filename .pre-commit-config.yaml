@@ -6,9 +6,9 @@ repos:
       - id: check-added-large-files
       - id: check-ast
       - id: check-byte-order-marker
-      - id: check-json
+#      - id: check-json
       - id: check-merge-conflict
-      - id: check-xml
+#      - id: check-xml
       - id: check-yaml
       - id: debug-statements
       - id: detect-private-key
@@ -18,9 +18,3 @@ repos:
       - id: requirements-txt-fixer
       - id: mixed-line-ending
         args: ['--fix=crlf']
-  - repo: https://github.com/ambv/black
-    rev: 18.9b0
-    hooks:
-      - id: black
-        language_version: python3.7
-        args: [-v, --skip-string-normalization, --py36, tests, setup.py, src]

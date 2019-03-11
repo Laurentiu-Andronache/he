@@ -65,6 +65,8 @@ setup(
             'pytest-xdist',
             'mypy',
             'check-manifest',
+            'pydocstyle',
+            'doc8',
         ],
         'test': ['pytest', 'pytest-cov', 'pytest-sugar', 'pytest-icdiff'],
     },
