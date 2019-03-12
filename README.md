@@ -1,3 +1,4 @@
+[![PyPI version](https://badge.fury.io/py/he.svg)](https://badge.fury.io/py/he)
 [![Build Status](https://travis-ci.com/Laurentiu-Andronache/he.svg?branch=master)](https://travis-ci.com/Laurentiu-Andronache/he)
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/Laurentiu-Andronache/he.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Laurentiu-Andronache/he/alerts/)
 [![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/Laurentiu-Andronache/he.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Laurentiu-Andronache/he/context:python)
